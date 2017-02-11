@@ -15,3 +15,38 @@ git push = Envia para o repositório;
 git reset + arquivo = Tira de Staging e volta pra local;
 git rm + arquivo = Também remove o arquivo;
 ```
+Estrutura básica para projeto em cucumber
+```ruby
+Comandos básicos para iniciar um projeto em Cucumber.
+
+cucumber -- init = Inicia um projeto novo.
+
+Organizar da seguinte maneira:
+
+  nome_projeto
+  cucumber
+  features
+  specifications
+  step_definitions
+  support
+  hooks
+  page_objects
+
+No nosso arquivo de Enviroment (env.rb) vamos definir da seguinte maneira:
+
+require 'capybara/cucumber'
+require 'selenium-webdriver'
+require 'rspec'
+require 'faker'
+require 'cpf_faker'
+require 'site_prism'
+
+Capybara.register_driver :selenium do |app|
+  Capybara::Selenium::Driver.new(app, :browser => :firefox)
+end
+
+Capybara.default_driver = :selenium
+Capybara.default_max_wait_time = 60
+
+Capybara.app_host = ""
+```
