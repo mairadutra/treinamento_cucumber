@@ -1,7 +1,7 @@
 # treinamento_cucumber
 Aula 3 - Aprendendo a lidar com git.
 
-Comandos básicos do Git
+Comandos básicos do Git:
 
 ```ruby
 git status = Verifica o status atual do meu projeto (se add coisas, se alterei coisas, se removi coisas);
@@ -15,14 +15,9 @@ git push = Envia para o repositório;
 git reset + arquivo = Tira de Staging e volta pra local;
 git rm + arquivo = Também remove o arquivo;
 ```
-Estrutura básica para projeto em cucumber
-```ruby
-Comandos básicos para iniciar um projeto em Cucumber.
 
-cucumber -- init = Inicia um projeto novo.
-
-Organizar da seguinte maneira:
-
+Estrutura básica para projeto em Cucumber:
+```
   nome_projeto
   cucumber
   features
@@ -31,9 +26,15 @@ Organizar da seguinte maneira:
   support
   hooks
   page_objects
+  
+ ``` 
+Comandos básicos para iniciar um projeto em Cucumber.
+``` 
+cucumber -- init = Inicia um projeto novo.
+```
 
 No nosso arquivo de Enviroment (env.rb) vamos definir da seguinte maneira:
-
+```
 require 'capybara/cucumber'
 require 'selenium-webdriver'
 require 'rspec'
