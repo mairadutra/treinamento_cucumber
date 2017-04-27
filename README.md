@@ -3,7 +3,7 @@ Aula 3 - Aprendendo a lidar com git.
 
 Comandos básicos do Git
 
-``ruby
+```ruby
 git status = Verifica o status atual do meu projeto (se add coisas, se alterei coisas, se removi coisas);
 git add + arquivo = Adiciona o arquivo em Staging;
 git checkout -b "INICIAIS-Nome_branch" = Cria uma nova branch;
